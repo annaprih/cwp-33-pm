@@ -4,13 +4,14 @@
 const siege = require('siege');
 
 
-/*siege("node " + __dirname + "/index.js")
+siege("node " + __dirname + "/index.js")
     .on(3000)
     .concurrent(50)
     .for(120).seconds
     .get('/hash')
-    .attack();*/
+    .attack();
 /*
+
  GET:/hash
  done:256        errors:146
  200 OK: 256
@@ -18,7 +19,8 @@ const siege = require('siege');
  response: 727ms(min)    32285ms(max)    15815ms(avg)
  */
 
-siege()
+//pm2 start index.js-i 0
+/*siege()
     .on(3000)
     .concurrent(50)
     .for(120)
